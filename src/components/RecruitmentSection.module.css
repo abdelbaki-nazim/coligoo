@@ -1,0 +1,370 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  
+}
+
+
+.headerSection {
+  display: flex;
+  height: 247px;
+  padding: 5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  background: #fff3e6;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1024px) {
+  .headerSection {
+    padding: 5rem;
+  }
+}
+
+.headerSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerSectionText {
+  display: flex;
+  width: 100%;
+  max-width: 810px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.headerHeading {
+  color: #263238;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 110%;
+  margin: 0;
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+@media (min-width: 640px) {
+  .headerHeading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerHeading {
+    font-size: 3.5rem;
+  }
+}
+
+.headerParagraph {
+  color: #263238;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+
+@media (min-width: 640px) {
+  .headerParagraph {
+    font-size: 1.125rem;
+  }
+}
+
+.contentSection {
+  display: flex;
+  min-height: 382px;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  background: #fff3e6;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .contentSection {
+    flex-direction: row;
+    padding: 3rem;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentSection {
+    padding: 5rem;
+    gap: 5rem;
+  }
+}
+
+.contentSection.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentSection.reverse {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+  .contentSection.reverse {
+    flex-direction: row;
+  }
+}
+
+.sectionImage {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: imageSlideIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+@media (min-width: 640px) {
+  .sectionImage {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionImage {
+    width: 277px;
+    height: 277px;
+  }
+}
+
+.sectionImage:hover {
+  transform: scale(1.05);
+}
+
+.sectionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.875rem;
+  flex: 1;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: textSlideIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+@media (min-width: 768px) {
+  .sectionText {
+    text-align: left;
+  }
+}
+
+.reverse .sectionText {
+  animation: textSlideInReverse 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+@media (min-width: 768px) {
+  .reverse .sectionText {
+    text-align: left;
+  }
+}
+
+.sectionTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.caption {
+  color: #263238;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .caption {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .caption {
+    font-size: 1.25rem;
+  }
+}
+
+.sectionHeading {
+  color: #d35400;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 110%;
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .sectionHeading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionHeading {
+    font-size: 3.5rem;
+  }
+}
+
+.sectionParagraph {
+  color: #263238;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 143.75%;
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .sectionParagraph {
+    font-size: 1rem;
+  }
+}
+
+.actionButton {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid #d35400;
+  background: #d35400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.actionButton:hover {
+  background: #b8441f;
+  border-color: #b8441f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(211, 84, 0, 0.3);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+.buttonInner {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonText {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.buttonText.light {
+  color: #fff3e6;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes textSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textSlideInReverse {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .sectionText {
+    align-items: center;
+  }
+
+  .sectionTop {
+    align-items: center;
+    text-align: center;
+  }
+
+  .caption,
+  .sectionHeading,
+  .sectionParagraph {
+    text-align: center;
+  }
+}

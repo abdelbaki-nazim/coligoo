@@ -1,0 +1,390 @@
+.contactPage {
+  min-height: 100vh;
+  background-color: var(--white);
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 135px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 54px;
+  flex: 1;
+  max-width: 538px;
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contactTitle {
+  color: #263238;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.contactDescription {
+  color: #263238;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contactLabel {
+  color: #263238;
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.contactValue {
+  color: #263238;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.formLabel {
+  color: #263238;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.formInput {
+  display: flex;
+  height: 46px;
+  padding: 11px 16px;
+  border-radius: 15px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  color: #263238;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.formInput:focus {
+  border-color: #d35400;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.formSelect {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  border-radius: 15px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  color: #263238;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.formSelect:focus {
+  border-color: #d35400;
+}
+
+.formSelect option[value=""] {
+  color: #94a3b8;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+}
+
+.formTextarea {
+  display: flex;
+  height: 165px;
+  padding: 11px 16px;
+  border-radius: 15px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  color: #263238;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.formTextarea:focus {
+  border-color: #d35400;
+}
+
+.submitButton {
+  display: flex;
+  height: 48px;
+  padding: 13px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border-radius: 15px;
+  background: #d35400;
+  border: none;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #b8450e;
+}
+
+.submitButton:active {
+  background: #a03d0c;
+}
+
+.faqSection {
+  background-color: var(--white);
+  padding: 80px 16px;
+}
+
+.faqContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faqHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqTitle {
+  color: #263238;
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.faqDescription {
+  color: #263238;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqItem {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.faqQuestion:hover {
+  background-color: #f8fafc;
+}
+
+.faqQuestionText {
+  color: #263238;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  flex: 1;
+}
+
+.faqIcon {
+  color: #d35400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.faqAnswer {
+  padding: 0 24px 24px 24px;
+  background-color: #f8fafc;
+}
+
+.faqAnswerText {
+  color: #64748b;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    gap: 80px;
+  }
+
+  .contactTitle {
+    font-size: 48px;
+  }
+
+  .faqTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 40px 16px;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .contactInfo {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contactForm {
+    max-width: 100%;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .contactTitle {
+    font-size: 40px;
+  }
+
+  .contactLabel {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage {
+    padding: 20px 16px;
+  }
+
+  .contactTitle {
+    font-size: 32px;
+  }
+
+  .contactDescription {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .contactLabel {
+    font-size: 20px;
+  }
+
+  .contactContainer {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,60 @@
+.partnersSection {
+  padding: 48px 16px;
+  background: white;
+}
+
+@media (min-width: 1024px) {
+  .partnersSection {
+    padding: 48px 80px;
+  }
+}
+
+.scrollContainer {
+  overflow: hidden;
+}
+
+.scrollContent {
+  display: flex;
+  gap: 48px;
+  white-space: nowrap;
+  will-change: transform;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .scrollContent {
+    gap: 64px;
+  }
+}
+
+.logoItem {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon {
+  width: 125px;
+  height: 32px;
+  background: transparent;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .logoIcon {
+    width: 110px;
+    height: 28px;
+  }
+}

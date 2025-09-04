@@ -1,0 +1,151 @@
+
+.termsPage {
+  display: flex;
+  padding: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--white);
+  min-height: 80vh;
+}
+
+.termsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 54px;
+  flex: 1;
+  max-width: 1000px;
+}
+
+.termsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.termsTitle {
+  color: #263238;
+  
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.termsText {
+  color: #263238;
+  
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 100%;
+}
+
+.termsText p {
+  margin: 0 0 20px 0;
+}
+
+.termsText h2 {
+  color: #263238;
+  
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 30px 0 15px 0;
+}
+
+.termsText h3 {
+  color: #263238;
+  
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 20px 0 10px 0;
+}
+
+.termsText ul {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.termsText li {
+  margin: 8px 0;
+  line-height: 28px;
+}
+
+
+@media (max-width: 1024px) {
+  .termsPage {
+    padding: 60px 40px;
+  }
+  
+  .termsTitle {
+    font-size: 48px;
+  }
+  
+  .termsText h2 {
+    font-size: 22px;
+  }
+  
+  .termsText h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .termsPage {
+    padding: 40px 20px;
+  }
+  
+  .termsTitle {
+    font-size: 40px;
+  }
+  
+  .termsText {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .termsText h2 {
+    font-size: 20px;
+  }
+  
+  .termsText h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .termsPage {
+    padding: 20px 16px;
+  }
+  
+  .termsContainer {
+    gap: 30px;
+  }
+  
+  .termsTitle {
+    font-size: 32px;
+  }
+  
+  .termsText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .termsText h2 {
+    font-size: 18px;
+    margin: 25px 0 12px 0;
+  }
+  
+  .termsText h3 {
+    font-size: 16px;
+    margin: 15px 0 8px 0;
+  }
+  
+  .termsText ul {
+    padding-left: 25px;
+  }
+}

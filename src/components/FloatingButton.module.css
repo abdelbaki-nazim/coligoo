@@ -1,0 +1,158 @@
+
+.floatingButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #D35400;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(211, 84, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  text-decoration: none;
+  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  opacity: 1;
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.floatingButton:hover {
+  background: #B8450E;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(211, 84, 0, 0.4), 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.floatingButton:active {
+  transform: translateY(0);
+  transition: transform 0.1s ease;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  line-height: 1;
+}
+
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.floatingButton {
+  animation: floatIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+
+@media (max-width: 768px) {
+  .floatingButton {
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 18px;
+    max-width: 220px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
+  .iconContainer {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingButton {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 16px;
+    gap: 8px;
+    max-width: 180px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
+  .iconContainer {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .floatingButton {
+    padding: 12px;
+    border-radius: 50%;
+    max-width: 48px;
+    width: 48px;
+    height: 48px;
+    gap: 0;
+  }
+  
+  .label {
+    display: none;
+  }
+  
+  .iconContainer {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingButton {
+    animation: none;
+    transition: none;
+  }
+  
+  .floatingButton:hover {
+    transform: none;
+  }
+}
+
+
+.floatingButton:focus {
+  outline: 2px solid #FFF;
+  outline-offset: 2px;
+}
+
+.floatingButton:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.floatingButton:focus-visible {
+  outline: 2px solid #FFF;
+  outline-offset: 2px;
+}

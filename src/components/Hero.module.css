@@ -1,0 +1,182 @@
+.heroSection {
+  --color-primary: #ff5a01;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 526px;
+}
+
+.mainHeadline,
+.subtitle,
+.ctaButton {
+  animation: slideUpFadeIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.subtitle {
+  animation-delay: 0.2s;
+}
+.ctaButton {
+  animation-delay: 0.4s;
+}
+
+.mainHeadline {
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.textDark {
+  color: var(--coligoo-dark);
+}
+
+.textPrimary {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--coligoo-dark);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 50px;
+  background-color: transparent;
+  box-shadow: 0 4px 15px rgba(255, 90, 1, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 90, 1, 0.4);
+}
+
+.ctaButton:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 4px 15px rgba(255, 90, 1, 0.3);
+}
+
+.buttonText {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaButton:hover .buttonText {
+  color: white;
+}
+
+.imageContainer {
+  animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 4rem 2.5rem;
+    gap: 3rem;
+  }
+  .mainHeadline {
+    font-size: clamp(3.5rem, 10vw, 4.5rem);
+  }
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .heroImage {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 5rem 6rem;
+  }
+
+  .leftContent {
+    flex: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .mainHeadline {
+    font-size: 4.5rem;
+  }
+
+  .subtitle {
+    max-width: 32rem;
+  }
+
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .heroImage {
+    max-width: 100%;
+    width: 674px;
+    height: auto;
+  }
+}

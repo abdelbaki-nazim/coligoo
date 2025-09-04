@@ -1,0 +1,455 @@
+.trackingStatusSection {
+  display: flex;
+  padding: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  background-color: var(--white);
+}
+
+.statusContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
+}
+
+.statusHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.statusTitle {
+  color: #263238;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.orderDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  flex: 1;
+}
+
+.orderId {
+  color: #263238;
+
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.addressInfo {
+  color: #263238;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.deliveryDate {
+  color: #263238;
+
+  font-size: 21px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.deliveryType {
+  color: #263238;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.trackingProgress {
+  display: flex;
+  padding: 35px 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 45px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  min-width: 91px;
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timelinePoint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  z-index: 2;
+}
+
+.timelineLine {
+  width: 3px;
+  height: 86px;
+  background: #f9f6f0;
+  margin: -1px 0;
+}
+
+.timelineLine.completed {
+  background: #d35400;
+}
+
+.stepInfo {
+  position: absolute;
+  left: 50px;
+  top: -30px;
+  width: 400px;
+  color: #263238;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.stepTitle {
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.stepLocation,
+.stepAddress,
+.stepPhone {
+  margin: 4px 0;
+  font-weight: 400;
+}
+
+.currentStatus {
+  display: flex;
+  padding: 8px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.currentStatusTitle {
+  color: #263238;
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.currentStatusDescription {
+  width: 100%;
+  max-width: 522px;
+  color: #263238;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+.statusImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusImage {
+  width: 290px;
+  height: 290px;
+  object-fit: contain;
+}
+
+.faqSection {
+  display: flex;
+  padding: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background: #f9f6f0;
+}
+
+.faqContainer {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.faqHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.faqTitle {
+  color: #d35400;
+  text-align: center;
+
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 110%;
+  margin: 0;
+}
+
+.faqDescription {
+  color: #263238;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.faqItem {
+  display: flex;
+  width: 100%;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 0 6px 0 rgba(0, 0, 0, 0.07);
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.faqQuestionText {
+  flex: 1;
+  color: #263238;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 0;
+}
+
+.faqIcon {
+  width: 24px;
+  height: 24px;
+  color: #d35400;
+}
+
+.faqAnswer {
+  display: flex;
+  padding: 16px 0 0 0;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.faqAnswerText {
+  flex: 1;
+  color: #263238;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .trackingStatusSection {
+    padding: 60px 40px;
+  }
+
+  .statusTitle {
+    font-size: 48px;
+  }
+
+  .orderDetails {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .trackingProgress {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .stepInfo {
+    position: static;
+    width: auto;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .faqTitle {
+    font-size: 48px;
+  }
+
+  .currentStatus{
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .trackingStatusSection {
+    padding: 40px 20px;
+  }
+
+  .statusTitle {
+    font-size: 40px;
+  }
+
+  .orderId {
+    font-size: 20px;
+  }
+
+  .deliveryDate {
+    font-size: 18px;
+  }
+
+  .currentStatusTitle {
+    font-size: 20px;
+  }
+
+  .currentStatusDescription {
+    font-size: 16px;
+  }
+
+  .statusImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .faqSection {
+    padding: 60px 20px;
+  }
+
+  .faqTitle {
+    font-size: 36px;
+  }
+
+  .faqItem {
+    padding: 24px;
+  }
+
+  .faqQuestionText {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trackingStatusSection {
+    padding: 20px 16px;
+  }
+
+  .statusTitle {
+    font-size: 32px;
+  }
+
+  .statusContainer {
+    gap: 30px;
+  }
+
+  .orderId {
+    font-size: 18px;
+  }
+
+  .addressInfo {
+    font-size: 14px;
+  }
+
+  .deliveryDate {
+    font-size: 16px;
+  }
+
+  .deliveryType {
+    font-size: 14px;
+  }
+
+  .currentStatusTitle {
+    font-size: 18px;
+  }
+
+  .currentStatusDescription {
+    font-size: 14px;
+  }
+
+  .statusImage {
+    width: 180px;
+    height: 180px;
+  }
+
+  .faqTitle {
+    font-size: 28px;
+  }
+}
+

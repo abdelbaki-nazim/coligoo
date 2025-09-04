@@ -1,0 +1,151 @@
+
+.privacyPage {
+  display: flex;
+  padding: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--white);
+  min-height: 80vh;
+}
+
+.privacyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 54px;
+  flex: 1;
+  max-width: 1000px;
+}
+
+.privacyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.privacyTitle {
+  color: #263238;
+  
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.privacyText {
+  color: #263238;
+  
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 100%;
+}
+
+.privacyText p {
+  margin: 0 0 20px 0;
+}
+
+.privacyText h2 {
+  color: #263238;
+  
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 30px 0 15px 0;
+}
+
+.privacyText h3 {
+  color: #263238;
+  
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 20px 0 10px 0;
+}
+
+.privacyText ul {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.privacyText li {
+  margin: 8px 0;
+  line-height: 28px;
+}
+
+
+@media (max-width: 1024px) {
+  .privacyPage {
+    padding: 60px 40px;
+  }
+  
+  .privacyTitle {
+    font-size: 48px;
+  }
+  
+  .privacyText h2 {
+    font-size: 22px;
+  }
+  
+  .privacyText h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .privacyPage {
+    padding: 40px 20px;
+  }
+  
+  .privacyTitle {
+    font-size: 40px;
+  }
+  
+  .privacyText {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .privacyText h2 {
+    font-size: 20px;
+  }
+  
+  .privacyText h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacyPage {
+    padding: 20px 16px;
+  }
+  
+  .privacyContainer {
+    gap: 30px;
+  }
+  
+  .privacyTitle {
+    font-size: 32px;
+  }
+  
+  .privacyText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  
+  .privacyText h2 {
+    font-size: 18px;
+    margin: 25px 0 12px 0;
+  }
+  
+  .privacyText h3 {
+    font-size: 16px;
+    margin: 15px 0 8px 0;
+  }
+  
+  .privacyText ul {
+    padding-left: 25px;
+  }
+}
