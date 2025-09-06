@@ -21,7 +21,7 @@ export default function SolutionSection() {
         });
       },
       {
-        threshold: 0.2,
+        threshold: 0.3,
       }
     );
 

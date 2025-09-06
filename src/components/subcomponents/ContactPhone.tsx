@@ -17,7 +17,7 @@ export default function ContactPhone() {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     );
 
     observer.observe(el);

@@ -86,7 +86,7 @@ export default function MainContent() {
         });
       },
       {
-        threshold: 0.1,
+        threshold: 0.2,
         rootMargin: "-50px 0px",
       }
     );

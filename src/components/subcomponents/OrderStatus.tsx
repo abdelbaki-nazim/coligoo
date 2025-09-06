@@ -33,7 +33,7 @@ export default function OrderStatus() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.3 }
     );
 
     observer.observe(el);

@@ -54,7 +54,7 @@ export default function FaqSection() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.1,
+        threshold: 0.3,
       }
     );
 

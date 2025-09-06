@@ -3,7 +3,7 @@ import { useIntersectionObserver } from "@/../../hooks/useIntersectionObserver";
 
 export default function About() {
   const { targetRef, hasIntersected } = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.2,
     triggerOnce: true,
   });
 

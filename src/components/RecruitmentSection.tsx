@@ -26,7 +26,7 @@ const RecruitmentSection = () => {
         });
       },
       {
-        threshold: 0.2,
+        threshold: 0.3,
         rootMargin: "-50px",
       }
     );
