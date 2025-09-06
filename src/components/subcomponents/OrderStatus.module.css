@@ -1,0 +1,393 @@
+.section {
+  display: flex;
+  padding: 35px 20px;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 520ms cubic-bezier(0.2, 0.9, 0.3, 1),
+    transform 520ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.statusSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 520ms cubic-bezier(0.2, 0.9, 0.3, 1),
+    transform 520ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.statusButton {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.statusButton:hover {
+  border-color: #ff5a01;
+  color: #ff5a01;
+}
+
+.statusButton.active {
+  background: #ff5a01;
+  border-color: #ff5a01;
+  color: white;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 12px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 520ms cubic-bezier(0.2, 0.9, 0.3, 1),
+    transform 520ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.orderDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orderId {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.addresses {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.addresses p {
+  margin: 0 0 16px 0;
+}
+
+.addresses p:last-child {
+  margin-bottom: 0;
+}
+
+.addresses strong {
+  font-weight: 700;
+}
+
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.estimatedDate {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.deliveryType {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.deliveryType strong {
+  font-weight: 700;
+}
+
+.progressTracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.progressStep:last-child {
+  flex: 0;
+}
+
+.stepIcon {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff0de;
+  color: #263238;
+  transition: all 0.3s ease;
+}
+
+.stepIcon.completed {
+  background: #ff5a01;
+  color: white;
+}
+
+.stepIcon.failed {
+  background: #ff5a01;
+  color: white;
+}
+
+.progressLine {
+  height: 3px;
+  flex: 1;
+  background: #fff0de;
+  transition: background 0.3s ease;
+}
+
+.progressLine.completed {
+  background: #ff5a01;
+}
+
+.statusContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.statusTitle {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.statusDescription {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+.statusImage {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.agentInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.agentProfile {
+  position: relative;
+}
+
+.agentAvatar {
+  width: 72px;
+  height: 72px;
+}
+
+.verificationBadge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 33px;
+  height: 33px;
+}
+
+.agentDetails {
+  flex: 1;
+}
+
+.agentName {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 5px 0;
+}
+
+.agentPhone {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.messageLabel {
+  color: #263238;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.messageInput {
+  height: 165px;
+  padding: 15px;
+  border: 1px solid #94a3b8;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+.messageInput:focus {
+  border-color: #ff5a01;
+}
+
+.sendButton {
+  height: 48px;
+  padding: 13px 0;
+  background: #ff5a01;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sendButton:hover {
+  background: #e44d01;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .statusSelector {
+    justify-content: center;
+  }
+
+  .orderCard {
+    padding: 50px 40px;
+  }
+
+  .statusImage {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .title {
+    font-size: 55px;
+  }
+
+  .orderCard {
+    padding: 60px 50px;
+  }
+
+  .statusImage {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.visible .title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visible .statusSelector {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 100ms;
+}
+
+.visible .orderCard {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 200ms;
+}

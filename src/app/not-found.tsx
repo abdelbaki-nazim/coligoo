@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import styles from "./not-found.module.css";
+import Image from "next/image";
 
 export default function NotFound() {
   const pathname = usePathname();
@@ -11,7 +12,15 @@ export default function NotFound() {
   return (
     <main className={styles.wrapper}>
       <div className={styles.card}>
-        <div className={styles.code}>404</div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/not-found/404-illustration2.svg"
+            alt="Page non trouvée"
+            width={300}
+            height={200}
+            priority
+          />
+        </div>
         <h1 className={styles.title}>Oups — page introuvable</h1>
         <p className={styles.subtitle}>
           La page demandée n&apos;existe pas ou a peut-être été déplacée.

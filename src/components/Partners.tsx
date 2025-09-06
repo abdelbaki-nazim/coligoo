@@ -28,8 +28,6 @@ const Partners: React.FC = () => {
           {Array.from({ length: 6 }, (_, setIndex: number) =>
             partnerLogos.map((partner, index) => {
               const src = `/partners/${partner.name}.png`;
-              console.log(src);
-
               return (
                 <div
                   key={`set-${setIndex}-${index}`}

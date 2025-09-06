@@ -15,6 +15,7 @@
 @media (min-width: 1024px) {
   .section {
     padding: 4.375rem 5rem;
+    display: block !important;
   }
 }
 

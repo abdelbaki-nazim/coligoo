@@ -216,7 +216,6 @@
   letter-spacing: 1px;
 }
 
-
 .about {
   background-color: var(--coligoo-cream);
   padding: 56px 16px 80px;
@@ -263,7 +262,6 @@
   font-size: 18px;
   line-height: 1.6;
 }
-
 
 .features {
   background-color: var(--white);
@@ -333,7 +331,6 @@
   line-height: 1.6;
 }
 
-
 .location {
   background-color: var(--white);
   padding: 56px 16px 80px;
@@ -380,7 +377,6 @@
   line-height: 1.6;
   margin-bottom: 32px;
 }
-
 
 .testimonials {
   background-color: var(--coligoo-orange);
@@ -747,16 +743,9 @@
   }
 }
 
-
-
 .services {
   background-color: var(--white);
   padding: 4rem 1.5rem;
-}
-
-.servicesContainer {
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 .sectionHeader {
@@ -782,7 +771,7 @@
 
 .serviceCards {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
@@ -838,9 +827,6 @@
   letter-spacing: 1px;
 }
 
-
-
-
 @media (min-width: 768px) {
   .services {
     padding: 5rem 3rem;
@@ -849,10 +835,9 @@
   .serviceCards {
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 }
-
 
 @media (min-width: 1024px) {
   .services {
@@ -860,22 +845,24 @@
   }
 
   .serviceCards {
-    
     flex-wrap: nowrap;
-    gap: 2rem; 
+    gap: 2rem;
   }
 
   .serviceCard {
-    
-    
     flex: 1 1 340px;
-    /*
-      - grow: 1 -> Permet aux cartes de grandir pour remplir l'espace.
-      - shrink: 1 -> Permet aux cartes de rétrécir si l'espace manque.
-      - basis: 340px -> Leur taille de base avant de grandir/rétrécir.
-    */
-    
+  }
+
+  .services {
+    display: block !important;
+  }
+
+  .solutionsSection,
+  .contactPhoneSection {
+    display: none !important;
+  }
+
+  .location {
+    display: block !important;
   }
 }
-
-

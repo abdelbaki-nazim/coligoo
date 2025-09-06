@@ -1,13 +1,9 @@
-
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  
 }
-
 
 .headerSection {
   display: flex;
@@ -25,6 +21,10 @@
 }
 
 @media (min-width: 1024px) {
+  .container {
+    display: block !important;
+  }
+
   .headerSection {
     padding: 5rem;
   }
@@ -306,7 +306,6 @@
   color: #fff3e6;
 }
 
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -350,7 +349,6 @@
     transform: translateX(0);
   }
 }
-
 
 @media (max-width: 767px) {
   .sectionText {

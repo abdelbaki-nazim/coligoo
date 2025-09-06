@@ -52,7 +52,7 @@ const RecruitmentSection = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ display: "none" }}>
       <section
         ref={headerRef}
         className={`${styles.headerSection} ${

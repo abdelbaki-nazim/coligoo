@@ -4,6 +4,8 @@ import About from "./About";
 import TestimonialsSection from "./TestimonialsSection";
 import FaqSection from "./FAQ";
 import Image from "next/image";
+import SolutionSection from "./subcomponents/SolutionSection";
+import ContactPhone from "./subcomponents/ContactPhone";
 
 const ArrowRightIcon = () => (
   <svg
@@ -152,7 +154,7 @@ export default function MainContent() {
           visibleSections.has("services") ? styles.animate : ""
         }`}
       >
-        <div className={styles.servicesContainer}>
+        <div className={styles.servicesContainer} style={{ display: "none" }}>
           <div className={styles.sectionHeader}>
             <h3 className={styles.sectionCaption}>Nos services</h3>
             <h2 className={styles.sectionTitle}>
@@ -247,12 +249,17 @@ export default function MainContent() {
         </div>
       </section>
 
+      <div className={styles.solutionsSection} style={{ display: "block" }}>
+        <SolutionSection />
+      </div>
+
       <section
         ref={sectionRefs.location}
         data-section="location"
         className={`${styles.location} ${
           visibleSections.has("location") ? styles.animate : ""
         }`}
+        style={{ display: "none" }}
       >
         <div className={styles.locationContainer}>
           <div className={styles.locationImage}>
@@ -278,6 +285,10 @@ export default function MainContent() {
       </section>
 
       <TestimonialsSection />
+
+      <div className={styles.contactPhoneSection} style={{ display: "block" }}>
+        <ContactPhone />
+      </div>
 
       <FaqSection />
     </>

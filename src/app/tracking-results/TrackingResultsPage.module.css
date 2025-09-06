@@ -325,11 +325,8 @@
 
 @media (max-width: 1024px) {
   .trackingStatusSection {
+    display: none;
     padding: 60px 40px;
-  }
-
-  .statusTitle {
-    font-size: 48px;
   }
 
   .orderDetails {
@@ -350,18 +347,8 @@
     text-align: center;
   }
 
-  .faqTitle {
-    font-size: 48px;
-  }
-
-  .currentStatus{
+  .currentStatus {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .trackingStatusSection {
-    padding: 40px 20px;
   }
 
   .statusTitle {
@@ -403,6 +390,10 @@
 
   .faqQuestionText {
     font-size: 18px;
+  }
+
+  .TrackingPhone {
+    display: block !important;
   }
 }
 
@@ -452,4 +443,3 @@
     font-size: 28px;
   }
 }
-

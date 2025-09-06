@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./TrackingResultsPage.module.css";
 import FaqSection from "@/components/FAQ";
+import OrderStatus from "@/components/subcomponents/OrderStatus";
 
 interface TrackingStep {
   id: number;
@@ -27,107 +28,114 @@ const TrackingStatus = ({
   statusImage: string;
 }) => {
   return (
-    <section className={styles.trackingStatusSection}>
-      <div className={styles.statusContainer}>
-        <div className={styles.statusHeader}>
-          <h1 className={styles.statusTitle}>Statut de la commande</h1>
-        </div>
+    <>
+      <section className={styles.trackingStatusSection}>
+        <div className={styles.statusContainer}>
+          <div className={styles.statusHeader}>
+            <h1 className={styles.statusTitle}>Statut de la commande</h1>
+          </div>
 
-        <div className={styles.orderDetails}>
-          <div className={styles.orderInfo}>
-            <h2 className={styles.orderId}>Commande ID : #1234</h2>
-            <div className={styles.addressInfo}>
-              <p>
-                <strong>Adresse de l&apos;expéditeur :</strong>
+          <div className={styles.orderDetails}>
+            <div className={styles.orderInfo}>
+              <h2 className={styles.orderId}>Commande ID : #1234</h2>
+              <div className={styles.addressInfo}>
+                <p>
+                  <strong>Adresse de l&apos;expéditeur :</strong>
+                  <br />
+                  Nom : Entreprise XYZ
+                  <br />
+                  Adresse : 45, Boulevard Mohamed V, Alger Centre, 16000,
+                  Algérie
+                  <br />
+                  Téléphone : +213 233456789
+                </p>
                 <br />
-                Nom : Entreprise XYZ
-                <br />
-                Adresse : 45, Boulevard Mohamed V, Alger Centre, 16000, Algérie
-                <br />
-                Téléphone : +213 233456789
+                <p>
+                  <strong>Adresse du récepteur (Destinataire)</strong>
+                  <br />
+                  Nom : Ahmed Benahmed
+                  <br />
+                  Adresse : 12, Rue des Martyrs, Wilaya d&apos;Alger, 16000,
+                  Algérie
+                  <br />
+                  Téléphone : +213 561234567
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.deliveryInfo}>
+              <p className={styles.deliveryDate}>
+                Date de livraison estimée : 12-12-2025 / 12:45
               </p>
-              <br />
-              <p>
-                <strong>Adresse du récepteur (Destinataire)</strong>
-                <br />
-                Nom : Ahmed Benahmed
-                <br />
-                Adresse : 12, Rue des Martyrs, Wilaya d&apos;Alger, 16000, Algérie
-                <br />
-                Téléphone : +213 561234567
+              <p className={styles.deliveryType}>
+                <strong>Type de livraison :</strong> Livraison à domicile
               </p>
             </div>
           </div>
 
-          <div className={styles.deliveryInfo}>
-            <p className={styles.deliveryDate}>
-              Date de livraison estimée : 12-12-2025 / 12:45
-            </p>
-            <p className={styles.deliveryType}>
-              <strong>Type de livraison :</strong> Livraison à domicile
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.trackingProgress}>
-          <div className={styles.leftColumn}>
-            <div className={styles.timeline}>
-              {steps.map((step, index) => (
-                <div key={step.id} className={styles.timelineItem}>
-                  <div
-                    className={`${styles.timelinePoint} ${
-                      step.completed ? styles.completed : ""
-                    }`}
-                  >
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 15 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="7.5"
-                        cy="7"
-                        r="7"
-                        fill={step.completed ? "#D35400" : "#F9F6F0"}
-                      />
-                    </svg>
-                  </div>
-                  {index < steps.length - 1 && (
+          <div className={styles.trackingProgress}>
+            <div className={styles.leftColumn}>
+              <div className={styles.timeline}>
+                {steps.map((step, index) => (
+                  <div key={step.id} className={styles.timelineItem}>
                     <div
-                      className={`${styles.timelineLine} ${
+                      className={`${styles.timelinePoint} ${
                         step.completed ? styles.completed : ""
                       }`}
-                    ></div>
-                  )}
-                  <div className={styles.stepInfo}>
-                    <h4 className={styles.stepTitle}>{step.title}</h4>
-                    <p className={styles.stepLocation}>{step.location}</p>
-                    <p className={styles.stepAddress}>{step.address}</p>
-                    <p className={styles.stepPhone}>{step.phone}</p>
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="7.5"
+                          cy="7"
+                          r="7"
+                          fill={step.completed ? "#D35400" : "#F9F6F0"}
+                        />
+                      </svg>
+                    </div>
+                    {index < steps.length - 1 && (
+                      <div
+                        className={`${styles.timelineLine} ${
+                          step.completed ? styles.completed : ""
+                        }`}
+                      ></div>
+                    )}
+                    <div className={styles.stepInfo}>
+                      <h4 className={styles.stepTitle}>{step.title}</h4>
+                      <p className={styles.stepLocation}>{step.location}</p>
+                      <p className={styles.stepAddress}>{step.address}</p>
+                      <p className={styles.stepPhone}>{step.phone}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className={styles.currentStatus}>
-            <h3 className={styles.currentStatusTitle}>{statusTitle}</h3>
-            <p className={styles.currentStatusDescription}>
-              {statusDescription}
-            </p>
-            <div className={styles.statusImageContainer}>
-              <img
-                src={statusImage}
-                alt={statusTitle}
-                className={styles.statusImage}
-              />
+            <div className={styles.currentStatus}>
+              <h3 className={styles.currentStatusTitle}>{statusTitle}</h3>
+              <p className={styles.currentStatusDescription}>
+                {statusDescription}
+              </p>
+              <div className={styles.statusImageContainer}>
+                <img
+                  src={statusImage}
+                  alt={statusTitle}
+                  className={styles.statusImage}
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <div className={styles.TrackingPhone} style={{ display: "none" }}>
+        <OrderStatus />
       </div>
-    </section>
+    </>
   );
 };
 

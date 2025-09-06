@@ -16,7 +16,6 @@ export default function Home() {
       <MainContent />
       <TrackingSection />
       <RecruitmentSection />
-      <FloatingButton />
     </div>
   );
 }

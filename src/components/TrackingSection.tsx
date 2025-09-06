@@ -61,7 +61,11 @@ const TrackingSection = () => {
 
   return (
     <div>
-      <section ref={sectionRef} className={styles.section}>
+      <section
+        ref={sectionRef}
+        className={styles.section}
+        style={{ display: "none" }}
+      >
         <div className={styles.wrapper}>
           <div
             className={`${styles.container} ${isVisible ? styles.animate : ""}`}

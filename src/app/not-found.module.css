@@ -19,6 +19,12 @@
   border: 1px solid rgba(38, 50, 56, 0.04);
 }
 
+.imageWrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 .code {
   font-size: 4.25rem;
   font-weight: 800;
